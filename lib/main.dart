@@ -18,17 +18,17 @@ class NotesApp extends StatelessWidget {
       builder: (context, user, _) => MaterialApp(
         title: 'Flutter Keep',
         theme: Theme.of(context).copyWith(
-          brightness: Brightness.light,
-          primaryColor: Colors.white,
+          brightness: Brightness.dark,
+          primaryColor: Colors.black,
           accentColor: kAccentColorLight,
           appBarTheme: AppBarTheme.of(context).copyWith(
             elevation: 0,
-            brightness: Brightness.light,
+            brightness: Brightness.dark,
             iconTheme: IconThemeData(
               color: kIconTintLight,
             ),
           ),
-          scaffoldBackgroundColor: Colors.white,
+          scaffoldBackgroundColor: Colors.black,
           bottomAppBarColor: kBottomAppBarColorLight,
           primaryTextTheme: Theme.of(context).primaryTextTheme.copyWith(
             // title

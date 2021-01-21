@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> with CommandHandler {
             drawer: AppDrawer(),
             floatingActionButton: canCreate ? _fab(context) : null,
             bottomNavigationBar: canCreate ? _bottomActions() : null,
-            floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+          //floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
             extendBody: true,
           );
         },
@@ -150,15 +150,39 @@ class _HomeScreenState extends State<HomeScreen> with CommandHandler {
       height: kBottomBarSize,
       padding: const EdgeInsets.symmetric(horizontal: 17),
       child: Row(
-        children: <Widget>[
-          const Icon(AppIcons.checkbox, size: 26, color: kIconTintLight),
-          const SizedBox(width: 30),
-          const Icon(AppIcons.brush_sharp, size: 26, color: kIconTintLight),
-          const SizedBox(width: 30),
-          const Icon(AppIcons.mic, size: 26, color: kIconTintLight),
-          const SizedBox(width: 30),
-          const Icon(AppIcons.insert_photo, size: 26, color: kIconTintLight),
-        ],
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  IconButton(
+                    iconSize: 30.0,
+                    // padding: EdgeInsets.only(left: 28.0),
+                    icon: Icon(Icons.public),
+                    onPressed: () {
+                      setState(() {
+                        //_myPage.jumpToPage(0);
+                      });
+                    },
+                  ),
+                  IconButton(
+                    iconSize: 30.0,
+                    icon: Icon(Icons.group),
+                    onPressed: () {
+                      setState(() {
+                        //_myPage.jumpToPage(1);
+                      });
+                    },
+                  ),
+                  IconButton(
+                    iconSize: 30.0,
+                    //padding: EdgeInsets.only(left: 28.0),
+                    icon: Icon(Icons.perm_identity),
+                    onPressed: () {
+                      setState(() {
+                        //_myPage.jumpToPage(2);
+                      });
+                    },
+                  ),
+                ],
       ),
     ),
   );
